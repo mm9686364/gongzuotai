@@ -456,7 +456,7 @@
           });
         } else {
           await api('PUT', '/api/schedules/' + inst.schedule_id, {
-            title, s_date: inst.date, s_time: $('sdTime').value, meeting_id: meetingId,
+            title, s_date: $('sdDate').value, s_time: $('sdTime').value, meeting_id: meetingId,
           });
         }
         closeModal(); await loadScheduleSeries(); await loadScheduleWindow(); showToast('已保存');
